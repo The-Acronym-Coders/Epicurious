@@ -10,7 +10,6 @@ public class ItemBarleySeeds extends DefaultItemSeed {
     public ItemBarleySeeds() {
         super(ModBlocks.barley, Blocks.FARMLAND);
         setUnlocalizedName(Epicurious.MODID + ".seed_barley");
-        setRegistryName("seed_barley");
     }
 
 }

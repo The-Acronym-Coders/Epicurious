@@ -1,8 +1,8 @@
 package com.teamacronymcoders.epicurious.common.content.wine.grape;
 
-import com.teamacronymcoders.epicurious.common.defaults.DefaultBlockCrop;
 import com.teamacronymcoders.epicurious.Epicurious;
 import com.teamacronymcoders.epicurious.common.ModItems;
+import com.teamacronymcoders.epicurious.common.defaults.DefaultBlockCrop;
 import com.teamacronymcoders.epicurious.utils.EpicuriousUtilities;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
@@ -19,7 +19,6 @@ public class BlockCropGrape extends DefaultBlockCrop {
     public BlockCropGrape() {
         super(ModItems.seeds_grape, ModItems.grapes);
         setUnlocalizedName(Epicurious.MODID + ".crop_grape");
-        setRegistryName("crop_grape");
     }
 
     @Override

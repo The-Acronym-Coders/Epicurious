@@ -1,7 +1,7 @@
 package com.teamacronymcoders.epicurious.common;
 
-import com.teamacronymcoders.epicurious.common.content.wine.grape.BlockCropGrape;
 import com.teamacronymcoders.epicurious.common.content.beer.barley.BlockCropBarley;
+import com.teamacronymcoders.epicurious.common.content.wine.grape.BlockCropGrape;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {

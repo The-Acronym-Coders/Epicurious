@@ -1,8 +1,8 @@
 package com.teamacronymcoders.epicurious.client;
 
+import com.teamacronymcoders.epicurious.Epicurious;
 import com.teamacronymcoders.epicurious.common.CommonProxy;
 import com.teamacronymcoders.epicurious.common.ModBlocks;
-import com.teamacronymcoders.epicurious.Epicurious;
 import com.teamacronymcoders.epicurious.common.ModItems;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;

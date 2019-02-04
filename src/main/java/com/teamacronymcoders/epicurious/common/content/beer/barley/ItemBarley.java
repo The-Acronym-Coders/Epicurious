@@ -17,7 +17,6 @@ public class ItemBarley extends DefaultItem {
 
     public ItemBarley() {
         setUnlocalizedName(Epicurious.MODID + ".item_barley");
-        setRegistryName("item_barley");
     }
 
     @Override
