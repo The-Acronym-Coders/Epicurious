@@ -1,18 +1,9 @@
 package com.teamacronymcoders.epicurious;
 
 import com.teamacronymcoders.base.BaseModFoundation;
-import com.teamacronymcoders.base.registrysystem.BlockRegistry;
 import com.teamacronymcoders.base.registrysystem.ItemRegistry;
 import com.teamacronymcoders.epicurious.common.CommonProxy;
-import com.teamacronymcoders.epicurious.common.ModFluids;
 import com.teamacronymcoders.epicurious.common.content.ItemYeast;
-import com.teamacronymcoders.epicurious.common.content.beer.ItemBarleySeeds;
-import com.teamacronymcoders.epicurious.common.content.beer.barley.BlockCropBarley;
-import com.teamacronymcoders.epicurious.common.content.beer.barley.ItemBarley;
-import com.teamacronymcoders.epicurious.common.content.wine.fluid.FluidBlockWine;
-import com.teamacronymcoders.epicurious.common.content.wine.grape.BlockCropGrape;
-import com.teamacronymcoders.epicurious.common.content.wine.grape.ItemGrapeSeeds;
-import com.teamacronymcoders.epicurious.common.content.wine.grape.ItemGrapes;
 import com.teamacronymcoders.epicurious.utils.EpicuriousConfigs;
 import com.teamacronymcoders.epicurious.utils.EpicuriousTab;
 import crafttweaker.IAction;
@@ -76,30 +67,8 @@ public class Epicurious extends BaseModFoundation<Epicurious> {
     }
 
     @Override
-    public void registerBlocks(BlockRegistry registry) {
-        if (EpicuriousConfigs.enableWineContent) {
-            FluidRegistry.registerFluid(ModFluids.wine);
-            FluidRegistry.addBucketForFluid(ModFluids.wine);
-            registry.register(new BlockCropGrape());
-            registry.register(new FluidBlockWine());
-        }
-        if (EpicuriousConfigs.enableBeerContent) {
-            registry.register(new BlockCropBarley());
-        }
-    }
-
-    @Override
     public void registerItems(ItemRegistry registry) {
         registry.register(new ItemYeast());
-
-        if (EpicuriousConfigs.enableWineContent) {
-            registry.register(new ItemGrapes());
-            registry.register(new ItemGrapeSeeds());
-        }
-        if (EpicuriousConfigs.enableBeerContent) {
-            registry.register(new ItemBarley());
-            registry.register(new ItemBarleySeeds());
-        }
     }
 
     @Override

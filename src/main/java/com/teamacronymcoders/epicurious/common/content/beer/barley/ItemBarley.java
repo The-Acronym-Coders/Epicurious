@@ -1,6 +1,5 @@
 package com.teamacronymcoders.epicurious.common.content.beer.barley;
 
-import com.teamacronymcoders.epicurious.Epicurious;
 import com.teamacronymcoders.epicurious.common.ModItems;
 import com.teamacronymcoders.epicurious.common.defaults.DefaultItem;
 import net.minecraft.entity.item.EntityItem;
@@ -16,7 +15,7 @@ import net.minecraft.world.World;
 public class ItemBarley extends DefaultItem {
 
     public ItemBarley() {
-        setUnlocalizedName(Epicurious.MODID + ".item_barley");
+        setUnlocalizedName("barley");
     }
 
     @Override
