@@ -3,7 +3,6 @@ package com.teamacronymcoders.epicurious.common.content.compost;
 import com.teamacronymcoders.epicurious.Epicurious;
 import com.teamacronymcoders.epicurious.common.ModItems;
 import com.teamacronymcoders.epicurious.utils.network.UpdateStateMessage;
-import com.teamacronymcoders.survivalism.utils.network.SurvivalismPacketHandler;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -20,14 +19,19 @@ public class TileCompostBin extends TileEntity {
     void addCompost(EntityPlayer player) {
         if (world.getBlockState(getPos()).getBlock() instanceof BlockCompostBin) {
             IBlockState state = world.getBlockState(getPos());
-            compost = state.getValue(BlockCompostBin.compostAmount);
+            compost = state.getValue(BlockCompostBin.Compost_Amount);
             if (!(compost > 10)) {
                 compost += 1;
-                state.withProperty(BlockCompostBin.compostAmount, compost);
+                IBlockState newState = world.getBlockState(getPos()).withProperty(BlockCompostBin.Compost_Amount, compost);
+                world.setBlockState(getPos(), newState);
                 sendUpdatePacketClient();
             } else {
-                state.withProperty(BlockCompostBin.compostAmount, 0);
+                IBlockState newState = world.getBlockState(getPos()).withProperty(BlockCompostBin.Compost_Amount, 0);
+                world.setBlockState(getPos(), newState);
                 player.inventory.addItemStackToInventory(new ItemStack(ModItems.compost, MathHelper.getInt(world.rand, 1, 4)));
+                if (world.isRemote) {
+                    sendUpdatePacketClient();
+                }
                 sendUpdatePacketClient();
             }
         }
@@ -39,7 +43,6 @@ public class TileCompostBin extends TileEntity {
 
     private void sendUpdatePacketClient() {
         this.markDirty();
-        this.compost = getWorld().getBlockState(getPos()).getValue(BlockCompostBin.compostAmount);
         getWorld().addBlockEvent(getPos(), this.getBlockType(), 1, this.compost);
         Epicurious.INSTANCE.getPacketHandler().sendToAllAround(new UpdateStateMessage(getPos().getX(), getPos().getY(), getPos().getZ(), this.compost), new NetworkRegistry.TargetPoint(this.world.provider.getDimension(), (double) this.getPos().getX(), (double) this.getPos().getY(), (double) this.getPos().getZ(), 128d));
         this.world.notifyNeighborsOfStateChange(getPos(), getBlockType(), true);

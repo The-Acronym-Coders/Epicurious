@@ -20,7 +20,7 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 
 public class BlockCompostBin extends BlockBase {
-    public static PropertyInteger compostAmount = PropertyInteger.create("compost", 0, 11);
+    public static PropertyInteger Compost_Amount = PropertyInteger.create("compost", 0, 11);
 
     public BlockCompostBin() {
         super(Material.WOOD);
@@ -75,12 +75,12 @@ public class BlockCompostBin extends BlockBase {
     @Override
     @SuppressWarnings("deprecation")
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(compostAmount, meta);
+        return getDefaultState().withProperty(Compost_Amount, meta);
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        return state.getValue(compostAmount);
+        return state.getValue(Compost_Amount);
     }
 
     @Nullable
@@ -96,7 +96,7 @@ public class BlockCompostBin extends BlockBase {
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, compostAmount);
+        return new BlockStateContainer(this, Compost_Amount);
     }
 
     @Override
