@@ -1,0 +1,16 @@
+itemGroup.Epicurious=Epicurious
+
+fluid.epicurious.grape_juice=Grape Juice
+fluid.epicurious.wine=Wine
+fluid.epicurious.beer=Beer
+
+
+item.epicurious.yeast.name=Yeast
+
+item.epicurious.hops.name=Hops
+item.epicurious.barley.name=Barley
+item.epicurious.seed_barley.name=Barley Seeds
+
+item.epicurious.grape.name=Grapes
+item.epicurious.seed_grape.name=Grape Seeds
+item.epicurious.pomace.name=Pomace

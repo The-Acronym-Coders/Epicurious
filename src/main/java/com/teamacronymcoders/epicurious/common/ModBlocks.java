@@ -1,6 +1,7 @@
 package com.teamacronymcoders.epicurious.common;
 
 import com.teamacronymcoders.epicurious.common.content.beer.barley.BlockCropBarley;
+import com.teamacronymcoders.epicurious.common.content.beer.hops.BlockCropHops;
 import com.teamacronymcoders.epicurious.common.content.wine.grape.BlockCropGrape;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -10,4 +11,7 @@ public class ModBlocks {
 
     @GameRegistry.ObjectHolder("epicurious:crop_barley")
     public static BlockCropBarley barley;
+
+    @GameRegistry.ObjectHolder("epicurious:crop_hops")
+    public static BlockCropHops hops;
 }

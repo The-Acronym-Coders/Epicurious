@@ -6,6 +6,7 @@ import com.teamacronymcoders.epicurious.common.CommonProxy;
 import com.teamacronymcoders.epicurious.common.content.ItemYeast;
 import com.teamacronymcoders.epicurious.utils.EpicuriousConfigs;
 import com.teamacronymcoders.epicurious.utils.EpicuriousTab;
+import com.teamacronymcoders.epicurious.utils.network.EpicuriousNetworkHandler;
 import crafttweaker.IAction;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -33,8 +34,6 @@ public class Epicurious extends BaseModFoundation<Epicurious> {
     public static final String DEPS = "" +
             "required-after:patchouli@[1.0-13,);";
 
-    public static final Random RANDOM = new Random();
-
     private static final String COMMON = "com.teamacronymcoders.epicurious.common.CommonProxy";
     private static final String CLIENT = "com.teamacronymcoders.epicurious.client.ClientProxy";
 
@@ -44,7 +43,7 @@ public class Epicurious extends BaseModFoundation<Epicurious> {
     @Instance
     public static Epicurious INSTANCE;
 
-    private static Logger logger;
+    public static Logger logger;
 
     static {
         FluidRegistry.enableUniversalBucket();
@@ -59,6 +58,7 @@ public class Epicurious extends BaseModFoundation<Epicurious> {
     public void preInit(FMLPreInitializationEvent event) {
         super.preInit(event);
         proxy.preInit(event);
+        EpicuriousNetworkHandler.registerMessages();
     }
 
     @Override

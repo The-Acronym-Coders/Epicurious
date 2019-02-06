@@ -4,6 +4,6 @@ import com.teamacronymcoders.epicurious.common.defaults.DefaultItem;
 
 public class ItemYeast extends DefaultItem {
     public ItemYeast() {
-        setUnlocalizedName("item_yeast");
+        setUnlocalizedName("yeast");
     }
 }

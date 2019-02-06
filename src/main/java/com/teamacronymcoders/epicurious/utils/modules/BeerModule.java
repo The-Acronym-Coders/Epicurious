@@ -11,8 +11,12 @@ import com.teamacronymcoders.epicurious.common.content.beer.barley.BlockCropBarl
 import com.teamacronymcoders.epicurious.common.content.beer.barley.ItemBarley;
 import com.teamacronymcoders.epicurious.common.content.beer.fluid.FluidBeer;
 import com.teamacronymcoders.epicurious.common.content.beer.fluid.FluidBlockBeer;
+import com.teamacronymcoders.epicurious.common.content.beer.hops.BlockCropHops;
+import com.teamacronymcoders.epicurious.common.content.beer.hops.ItemHops;
+import com.teamacronymcoders.epicurious.common.recipes.brewing.RecipeBrewingBeer;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 
 @Module(value = Epicurious.MODID)
 public class BeerModule extends ModuleBase {
@@ -27,6 +31,7 @@ public class BeerModule extends ModuleBase {
         FluidRegistry.registerFluid(beer);
         FluidRegistry.addBucketForFluid(beer);
         blockRegistry.register(new BlockCropBarley());
+        blockRegistry.register(new BlockCropHops());
         blockRegistry.register(new FluidBlockBeer(beer));
     }
 
@@ -34,5 +39,12 @@ public class BeerModule extends ModuleBase {
     public void registerItems(ConfigRegistry configRegistry, ItemRegistry itemRegistry) {
         itemRegistry.register(new ItemBarley());
         itemRegistry.register(new ItemBarleySeeds());
+        itemRegistry.register(new ItemHops());
+    }
+
+    @Override
+    public void postInit(FMLPostInitializationEvent event) {
+        super.postInit(event);
+        RecipeBrewingBeer.setupBeerBrewRecipe();
     }
 }

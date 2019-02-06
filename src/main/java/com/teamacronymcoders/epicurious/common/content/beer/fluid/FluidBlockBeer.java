@@ -6,7 +6,6 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.particle.ParticleBubble;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
@@ -27,9 +26,9 @@ public class FluidBlockBeer extends BlockFluidBase {
     @SideOnly(Side.CLIENT)
     public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
         for (int i = 0; i < 1; i++) {
-            double x = (double)(pos.getX() + 1) - rand.nextDouble();
-            double y = (double)pos.getY() + rand.nextDouble() * 0.5D + 0.5D;
-            double z = (double)pos.getZ() + rand.nextDouble();
+            double x = (double) (pos.getX() + 1) - rand.nextDouble();
+            double y = (double) pos.getY() + rand.nextDouble() * 0.5D + 0.5D;
+            double z = (double) pos.getZ() + rand.nextDouble();
             worldIn.spawnParticle(EnumParticleTypes.SNOW_SHOVEL, x, y, z, 0d, 0.155d, 0d);
             Minecraft.getMinecraft().effectRenderer.spawnEffectParticle(420, x, y, z, 0d, 0.2d, 0d);
         }

@@ -10,6 +10,6 @@ public class FluidBeer extends Fluid {
     public FluidBeer() {
         super("beer", EpicuriousConstants.still, EpicuriousConstants.flowing, Coloring.fromHex("f28e1c").getIntColor());
         setRarity(EnumRarity.COMMON);
-        setUnlocalizedName(Epicurious.MODID + ".fluid.beer");
+        setUnlocalizedName(Epicurious.MODID + ".beer");
     }
 }

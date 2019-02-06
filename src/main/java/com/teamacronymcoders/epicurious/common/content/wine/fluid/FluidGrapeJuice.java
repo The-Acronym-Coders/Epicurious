@@ -6,10 +6,10 @@ import com.teamacronymcoders.epicurious.utils.EpicuriousConstants;
 import net.minecraft.item.EnumRarity;
 import net.minecraftforge.fluids.Fluid;
 
-public class FluidWine extends Fluid {
-    public FluidWine() {
-        super("wine", EpicuriousConstants.still, EpicuriousConstants.flowing, Coloring.fromHex("8e3155").getIntColor());
+public class FluidGrapeJuice extends Fluid {
+    public FluidGrapeJuice() {
+        super("grape_juice", EpicuriousConstants.still, EpicuriousConstants.flowing, Coloring.fromHex("63344b").getIntColor());
         setRarity(EnumRarity.COMMON);
-        setUnlocalizedName(Epicurious.MODID + ".wine");
+        setUnlocalizedName(Epicurious.MODID + ".grape_juice");
     }
 }
