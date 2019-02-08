@@ -1,0 +1,7 @@
+{
+	"name": "Beer",
+	"description": "This category details Beer making and the surrounding mechanics!",
+	"icon": "epicurious:barley",
+	"flag": "epicurious:beer",
+	"sortnum": 0
+}

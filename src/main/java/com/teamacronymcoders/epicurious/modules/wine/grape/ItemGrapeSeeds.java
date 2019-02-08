@@ -1,0 +1,15 @@
+package com.teamacronymcoders.epicurious.modules.wine.grape;
+
+import com.teamacronymcoders.epicurious.common.ModBlocks;
+import com.teamacronymcoders.epicurious.common.defaults.DefaultItemSeed;
+import net.minecraft.init.Blocks;
+
+public class ItemGrapeSeeds extends DefaultItemSeed {
+
+    public ItemGrapeSeeds() {
+        super(ModBlocks.grape, Blocks.FARMLAND);
+        setUnlocalizedName("seed_grape");
+    }
+
+
+}

@@ -1,9 +1,6 @@
 package com.teamacronymcoders.epicurious.common;
 
-import com.teamacronymcoders.epicurious.common.content.beer.fluid.ParticleBubblesExt;
-import com.teamacronymcoders.epicurious.common.recipes.brewing.RecipeBrewingBeer;
-import com.teamacronymcoders.epicurious.common.recipes.brewing.RecipeBrewingWine;
-import com.teamacronymcoders.epicurious.common.recipes.crushing.RecipeCrushingGrapeJuice;
+import com.teamacronymcoders.epicurious.modules.beer.fluid.ParticleBubblesExt;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;

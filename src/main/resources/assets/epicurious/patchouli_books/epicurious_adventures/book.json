@@ -1,0 +1,9 @@
+{
+	"name": "book.title",
+	"landing_text": "book.landing.text",
+	"version": 1,
+	"book_texture": "patchouli:textures/gui/book_red.png",
+	"model": "patchouli:book_red",
+	"creative_tab": "epicurious",
+	"show_progress": "false"
+}

@@ -1,11 +1,14 @@
-itemGroup.Epicurious=Epicurious
+itemGroup.epicurious=Epicurious
+
+tile.epicurious.compost_bin.name=Composting Bin
 
 fluid.epicurious.grape_juice=Grape Juice
 fluid.epicurious.wine=Wine
 fluid.epicurious.beer=Beer
 
-
 item.epicurious.yeast.name=Yeast
+
+item.epicurious.compost.name=Compost
 
 item.epicurious.hops.name=Hops
 item.epicurious.barley.name=Barley
@@ -14,3 +17,6 @@ item.epicurious.seed_barley.name=Barley Seeds
 item.epicurious.grape.name=Grapes
 item.epicurious.seed_grape.name=Grape Seeds
 item.epicurious.pomace.name=Pomace
+
+book.title=Epicurious Adventures
+book.landing.text=Welcome to your Culinary Adventure!

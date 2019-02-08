@@ -58,6 +58,11 @@ repositories{
         url "https://maven.thiakil.com"
     }
 
+    maven {
+        name 'TOP'
+        url "http://maven.tterrag.com/"
+    }
+
 }
 
 dependencies {
@@ -67,6 +72,7 @@ dependencies {
     // Ease-of-Use Tools:
     deobfCompile "mezz.jei:jei_1.12.2:${jei_version}"
     deobfCompile "mcp.mobius.waila:Hwyla:${hwyla_version}"
+    deobfCompile "mcjty.theoneprobe:TheOneProbe-1.12:${top_version}"
     deobfCompile "com.azanor.baubles:Baubles:${baubles_version}"
 
     // Addon Support

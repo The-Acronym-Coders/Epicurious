@@ -6,7 +6,6 @@ import com.teamacronymcoders.epicurious.common.CommonProxy;
 import com.teamacronymcoders.epicurious.common.content.ItemYeast;
 import com.teamacronymcoders.epicurious.utils.EpicuriousConfigs;
 import com.teamacronymcoders.epicurious.utils.EpicuriousTab;
-import com.teamacronymcoders.epicurious.utils.network.EpicuriousNetworkHandler;
 import crafttweaker.IAction;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -19,7 +18,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
 
 import static net.minecraftforge.fml.common.Mod.Instance;
 
@@ -28,6 +26,7 @@ public class Epicurious extends BaseModFoundation<Epicurious> {
     public static final String MODID = "epicurious";
     public static final EpicuriousTab TAB = new EpicuriousTab();
     public static final List<IAction> LATE_ADDITIONS = new LinkedList<>();
+    public static final List<IAction> LATE_REMOVALS = new LinkedList<>();
     public static final String NAME = "Epicurious";
     public static final String VERSION = "1.12.2-1.0.0";
     public static final String MCVERSION = "1.12,";
@@ -57,8 +56,8 @@ public class Epicurious extends BaseModFoundation<Epicurious> {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         super.preInit(event);
+        logger = event.getModLog();
         proxy.preInit(event);
-        EpicuriousNetworkHandler.registerMessages();
     }
 
     @Override
@@ -83,6 +82,8 @@ public class Epicurious extends BaseModFoundation<Epicurious> {
     public void postInit(FMLPostInitializationEvent event) {
         super.postInit(event);
         proxy.postInit(event);
+        LATE_REMOVALS.forEach(IAction::apply);
+        LATE_ADDITIONS.forEach(IAction::apply);
     }
 
     @Override

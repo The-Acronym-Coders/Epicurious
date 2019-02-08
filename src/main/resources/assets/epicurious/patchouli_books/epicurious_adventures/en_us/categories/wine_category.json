@@ -1,0 +1,7 @@
+{
+	"name": "Wine",
+	"description": "This category details Wine making and the surrounding mechanics!",
+	"icon": "epicurious:grapes",
+	"flag": "epicurious:wine",
+	"sortnum": 2
+}

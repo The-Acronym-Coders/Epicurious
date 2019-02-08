@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 
 public class EpicuriousTab extends CreativeTabs {
     public EpicuriousTab() {
-        super("Epicurious");
+        super("epicurious");
         setBackgroundImageName("item_search.png");
     }
 

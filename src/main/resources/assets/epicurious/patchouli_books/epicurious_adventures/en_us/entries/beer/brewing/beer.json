@@ -1,0 +1,15 @@
+{
+    "name": "Beer",
+    "icon": "minecraft:writable_book",
+    "category": "beer_category",
+    "pages": [
+        {
+            "type": "text",
+            "text": "Testing 123"
+        },
+        {
+            "type": "brewing",
+            "recipeID": "epicurious:beer"
+        }
+    ]
+}

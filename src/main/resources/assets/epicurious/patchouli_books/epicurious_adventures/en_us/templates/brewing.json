@@ -1,0 +1,57 @@
+ {
+ 	"processor": "com.teamacronymcoders.epicurious.modules.patchouli.componentProcessors.ProcessorBrewingRecipe",
+ 	"components": [
+ 		{
+ 			"type": "item",
+ 			"item": "#inputFluid",
+ 			"framed": "true",
+ 			"link_recipe": "true",
+ 			"x": 20,
+ 			"y": 30
+ 		},
+ 		{
+ 			"type": "item",
+ 			"item": "#ingredient0",
+ 			"framed": "true",
+ 			"link_recipe": "true",
+ 			"x": 20,
+ 			"y": 30
+ 		},
+ 		{
+ 			"type": "item",
+ 			"item": "#ingredient1",
+ 			"framed": "true",
+ 			"link_recipe": "true",
+ 			"x": 20,
+ 			"y": 30
+ 		},
+ 		{
+ 			"type": "item",
+ 			"item": "#ingredient2",
+ 			"framed": "true",
+ 			"link_recipe": "true",
+ 			"x": 20,
+ 			"y": 30
+ 		},
+ 		{
+ 			"type": "item",
+ 			"item": "#outputFluid",
+ 			"framed": "true",
+ 			"link_recipe": "true",
+ 			"x": 20,
+ 			"y": 30
+ 		}, 
+ 		{
+ 			"type": "text",
+ 			"text": "#ticks",
+ 			"x": 20,
+ 			"y": 30
+ 		},
+ 		{
+ 			"type": "text",
+ 			"text": "#time",
+ 			"x": 20,
+ 			"y": 30
+ 		}
+ 	]
+ }
