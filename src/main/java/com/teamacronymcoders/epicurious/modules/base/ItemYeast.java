@@ -1,4 +1,4 @@
-package com.teamacronymcoders.epicurious.common.content;
+package com.teamacronymcoders.epicurious.modules.base;
 
 import com.teamacronymcoders.epicurious.common.defaults.DefaultItem;
 

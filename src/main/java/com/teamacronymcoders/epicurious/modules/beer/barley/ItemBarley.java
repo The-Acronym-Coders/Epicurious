@@ -15,7 +15,7 @@ import net.minecraft.world.World;
 public class ItemBarley extends DefaultItem {
 
     public ItemBarley() {
-    	setTranslationKey("barley");
+        setTranslationKey("barley");
     }
 
     @Override

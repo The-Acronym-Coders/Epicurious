@@ -7,6 +7,7 @@ import com.teamacronymcoders.base.registrysystem.ItemRegistry;
 import com.teamacronymcoders.base.registrysystem.config.ConfigRegistry;
 import com.teamacronymcoders.epicurious.Epicurious;
 import com.teamacronymcoders.epicurious.common.ModBlocks;
+import com.teamacronymcoders.epicurious.common.ModItems;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
@@ -34,7 +35,7 @@ public class CompostModule extends ModuleBase {
 
     @Override
     public void registerItems(ConfigRegistry configRegistry, ItemRegistry itemRegistry) {
-        itemRegistry.register(new ItemCompost());
+        itemRegistry.register(ModItems.compost);
     }
 
     @Override
@@ -46,5 +47,6 @@ public class CompostModule extends ModuleBase {
     @SubscribeEvent
     public void registerModels(ModelRegistryEvent event) {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.compostBin), 0, new ModelResourceLocation("epicurious:compost_bin", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ModItems.compost, 0, new ModelResourceLocation("epicurious:compost", "inventory"));
     }
 }

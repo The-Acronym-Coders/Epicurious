@@ -1,6 +1,6 @@
 package com.teamacronymcoders.epicurious.common;
 
-import com.teamacronymcoders.epicurious.common.content.ItemYeast;
+import com.teamacronymcoders.epicurious.modules.base.ItemYeast;
 import com.teamacronymcoders.epicurious.modules.beer.ItemBarleySeeds;
 import com.teamacronymcoders.epicurious.modules.beer.barley.ItemBarley;
 import com.teamacronymcoders.epicurious.modules.beer.hops.ItemHops;

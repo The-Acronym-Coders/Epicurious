@@ -1,9 +1,7 @@
 package com.teamacronymcoders.epicurious;
 
 import com.teamacronymcoders.base.BaseModFoundation;
-import com.teamacronymcoders.base.registrysystem.ItemRegistry;
 import com.teamacronymcoders.epicurious.common.CommonProxy;
-import com.teamacronymcoders.epicurious.common.content.ItemYeast;
 import com.teamacronymcoders.epicurious.utils.EpicuriousConfigs;
 import com.teamacronymcoders.epicurious.utils.EpicuriousTab;
 import crafttweaker.IAction;
@@ -66,15 +64,12 @@ public class Epicurious extends BaseModFoundation<Epicurious> {
     }
 
     @Override
-    public void registerItems(ItemRegistry registry) {
-        registry.register(new ItemYeast());
-    }
-
-    @Override
     @EventHandler
     public void init(FMLInitializationEvent event) {
         super.init(event);
         proxy.init(event);
+        LATE_REMOVALS.forEach(IAction::apply);
+        LATE_ADDITIONS.forEach(IAction::apply);
     }
 
     @Override
@@ -82,8 +77,6 @@ public class Epicurious extends BaseModFoundation<Epicurious> {
     public void postInit(FMLPostInitializationEvent event) {
         super.postInit(event);
         proxy.postInit(event);
-        LATE_REMOVALS.forEach(IAction::apply);
-        LATE_ADDITIONS.forEach(IAction::apply);
     }
 
     @Override
