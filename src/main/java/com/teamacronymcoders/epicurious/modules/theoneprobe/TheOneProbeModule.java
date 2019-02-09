@@ -10,11 +10,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class TheOneProbeModule extends ModuleBase {
     private static boolean registered;
 
-    @Override
-    public String getName() {
-        return "theoneprobe";
-    }
-
     public static void register() {
         if (registered) {
             return;
@@ -22,6 +17,12 @@ public class TheOneProbeModule extends ModuleBase {
 
         registered = true;
         FMLInterModComms.sendFunctionMessage("theoneprobe", "getTheOneProbe", "com.teamacronymcoders.epicurious.modules.theoneprobe.TOPCompat");
+    }
+
+
+    @Override
+    public String getName() {
+        return "TheOneProbe";
     }
 
     @Override
