@@ -10,7 +10,9 @@ import mcp.mobius.waila.api.WailaPlugin;
 public class EpicuriousHwylaRegister implements IWailaPlugin {
     @Override
     public void register(IWailaRegistrar registrar) {
-        registrar.addConfig(Epicurious.MODID, "epicurious.compost", "Compost", true);
-        registrar.registerBodyProvider(new HwylaCompatProvider(), BlockCompostBin.class);
+        if (Epicurious.INSTANCE.getModuleHandler().isModuleEnabled("Hwyla")) {
+            registrar.addConfig(Epicurious.MODID, "epicurious.compost", "Compost", true);
+            registrar.registerBodyProvider(new HwylaCompatProvider(), BlockCompostBin.class);
+        }
     }
 }
