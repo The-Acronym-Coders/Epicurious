@@ -62,12 +62,10 @@ public class ItemGrapes extends DefaultFoodItem implements IDrink {
             ItemGrapes grapes = (ItemGrapes) stack.getItem();
             if (!player.capabilities.isCreativeMode) {
                 stack.shrink(1);
-                if (!player.capabilities.isCreativeMode) {
-                    if (stack.isEmpty()) {
-                        return new ItemStack(ModItems.seeds_grape, MathHelper.getInt(worldIn.rand, 1, 3));
-                    }
-                    player.inventory.addItemStackToInventory(new ItemStack(ModItems.seeds_grape, MathHelper.getInt(worldIn.rand, 1, 3)));
+                if (stack.isEmpty()) {
+                    return new ItemStack(ModItems.seeds_grape, MathHelper.getInt(worldIn.rand, 1, 3));
                 }
+                player.inventory.addItemStackToInventory(new ItemStack(ModItems.seeds_grape, MathHelper.getInt(worldIn.rand, 1, 3)));
             }
             if (handler.isThirsty()) {
                 thirst.addStats(grapes.getThirst(), grapes.getHydration());
