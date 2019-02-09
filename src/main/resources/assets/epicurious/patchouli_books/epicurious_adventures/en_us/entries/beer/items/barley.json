@@ -5,7 +5,11 @@
     "pages": [
         {
             "type": "text",
-            "text": "This is a test entry, but it should show up!"
+            "text": "Testing 123"
+        },
+        {
+            "type": "soaking",
+            "recipeID": "epicurious:leather1"
         }
     ]
 }

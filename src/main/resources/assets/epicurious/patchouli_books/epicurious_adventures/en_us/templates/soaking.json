@@ -1,5 +1,5 @@
  {
- 	"processor": "com.teamacronymcoders.epicurious.modules.patchouli.componentProcessors.ProcessorBrewingRecipe",
+ 	"processor": "com.teamacronymcoders.epicurious.modules.patchouli.componentProcessors.ProcessorSoakingRecipe",
  	"components": [
  		{
  			"type": "header",
@@ -17,7 +17,7 @@
  			"item": "#inputFluid",
  			"framed": "true",
  			"link_recipe": "true",
- 			"x": 10,
+ 			"x": 50,
  			"y": 50
  		},
 		{
@@ -26,44 +26,34 @@
 			"x": 10,
 			"y": 70
 		},
+		{
+			"type": "text",
+			"text": "+",
+			"x": 30,
+ 			"y": 50
+		},
  		{
  			"type": "item",
- 			"item": "#ingredient0",
+ 			"item": "#ingredient",
  			"framed": "true",
  			"link_recipe": "true",
- 			"x": 50,
- 			"y": 30
+ 			"x": 10,
+ 			"y": 50
  		},
  		{
- 			"type": "item",
- 			"item": "#ingredient1",
- 			"framed": "true",
- 			"link_recipe": "true",
- 			"x": 50,
+ 			"type": "text",
+ 			"text": "=",
+ 			"x": 70,
  			"y": 50
  		},
  		{
  			"type": "item",
- 			"item": "#ingredient2",
- 			"framed": "true",
- 			"link_recipe": "true",
- 			"x": 50,
- 			"y": 70
- 		},
- 		{
- 			"type": "item",
- 			"item": "#outputFluid",
+ 			"item": "#itemstack",
  			"framed": "true",
  			"link_recipe": "true",
  			"x": 90,
  			"y": 50
  		},
-		{
-			"type": "text",
-			"text": "#amountO",
-			"x": 90,
-			"y": 70
-		},
 		{
 			"type": "separator",
 			"x": 0,
@@ -75,17 +65,29 @@
  			"x": 50,
  			"y": 110
  		},
+ 		{
+			"type": "text",
+			"text": "#decreaseAmount",
+			"x": 30,
+			"y": 120
+		},
+		{
+			"type": "text",
+			"text": "#decreaseChance",
+			"x": 30,
+			"y": 130
+		},
 		{
 			"type": "text",
 			"text": "#time",
 			"x": 45,
-			"y": 120
+			"y": 150
 		},
 		{
 			"type": "text",
 			"text": "hh:mm:ss",
 			"x": 45,
-			"y": 130
+			"y": 160
 		}
  	]
  }

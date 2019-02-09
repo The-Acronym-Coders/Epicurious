@@ -1,8 +1,10 @@
 package com.teamacronymcoders.epicurious.modules.patchouli.componentProcessors;
 
+import com.teamacronymcoders.epicurious.modules.patchouli.PatchouliHelper;
 import com.teamacronymcoders.survivalism.common.recipe.RecipeStorage;
 import com.teamacronymcoders.survivalism.common.recipe.recipes.RecipeBarrel;
 import com.teamacronymcoders.survivalism.common.recipe.recipes.barrel.SoakingRecipe;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
@@ -40,16 +42,27 @@ public class ProcessorSoakingRecipe implements IComponentProcessor {
     public String process(String s) {
         initRecipeVars();
         switch (s) {
-            case "input":
-                return PatchouliAPI.instance.serializeIngredient(ingredient);
-            case "fluid":
+            case "name":
+                return recipe.getOutputItemStack().getDisplayName();
+            case "inputFluid":
                 return PatchouliAPI.instance.serializeItemStack(fluid);
-            case "output":
+            case "amountI":
+                return recipe.getInputFluid().amount + "mb";
+            case "ingredient":
+                return PatchouliAPI.instance.serializeIngredient(ingredient);
+            case "itemstack":
                 return PatchouliAPI.instance.serializeItemStack(stack);
-            case "ticks":
-                return String.valueOf(recipe.getTicks());
+            case "decreaseAmount":
+                return "Decrease Amount: " + recipe.getDecreaseAmount();
+            case "decreaseChance":
+                if (recipe.getDecreaseChance() < 0.0f || recipe.getDecreaseChance() > 1.0f) {
+                    return I18n.format("epicurious.patchouli.amount.decrease") + " " + "100%";
+                }
+                return I18n.format("epicurious.patchouli.chance") + " " + recipe.getDecreaseChance() * 100 + "%";
+            case "time_label":
+                return I18n.format("epicurious.patchouli.time");
             case "time":
-                return recipe.getTicks() / 20 + " Seconds";
+                return PatchouliHelper.getDurationString(recipe.getTicks() / 20);
         }
         return null;
     }

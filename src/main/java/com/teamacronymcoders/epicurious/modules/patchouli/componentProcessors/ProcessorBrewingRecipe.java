@@ -1,8 +1,10 @@
 package com.teamacronymcoders.epicurious.modules.patchouli.componentProcessors;
 
+import com.teamacronymcoders.epicurious.modules.patchouli.PatchouliHelper;
 import com.teamacronymcoders.survivalism.common.recipe.RecipeStorage;
 import com.teamacronymcoders.survivalism.common.recipe.recipes.RecipeBarrel;
 import com.teamacronymcoders.survivalism.common.recipe.recipes.barrel.BrewingRecipe;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
@@ -42,8 +44,12 @@ public class ProcessorBrewingRecipe implements IComponentProcessor {
     public String process(String s) {
         initRecipeVars();
         switch (s) {
+            case "name":
+                return recipe.getOutputFluid().getLocalizedName();
             case "inputFluid":
                 return PatchouliAPI.instance.serializeItemStack(inputFluid);
+            case "amountI":
+                return recipe.getInputFluid().amount + "mb";
             case "ingredient0":
                 return PatchouliAPI.instance.serializeIngredient(ingredients.get(0));
             case "ingredient1":
@@ -52,11 +58,15 @@ public class ProcessorBrewingRecipe implements IComponentProcessor {
                 return PatchouliAPI.instance.serializeIngredient(ingredients.get(2));
             case "outputFluid":
                 return PatchouliAPI.instance.serializeItemStack(outputFluid);
-            case "ticks":
-                return String.valueOf(recipe.getTicks());
+            case "amountO":
+                return recipe.getOutputFluid().amount + "mb";
+            case "time_label":
+                return I18n.format("epicurious.patchouli.time");
             case "time":
-                return recipe.getTicks() / 20 + " Seconds";
+                return PatchouliHelper.getDurationString(recipe.getTicks() / 20);
         }
         return null;
     }
+
+
 }
