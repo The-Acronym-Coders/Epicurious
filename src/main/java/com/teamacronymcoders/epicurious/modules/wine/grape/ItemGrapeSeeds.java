@@ -8,7 +8,7 @@ public class ItemGrapeSeeds extends DefaultItemSeed {
 
     public ItemGrapeSeeds() {
         super(ModBlocks.grape, Blocks.FARMLAND);
-        setUnlocalizedName("seed_grape");
+        setTranslationKey("seed_grape");
     }
 
 

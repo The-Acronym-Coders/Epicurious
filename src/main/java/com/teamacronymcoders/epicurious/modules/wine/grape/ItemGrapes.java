@@ -21,7 +21,7 @@ public class ItemGrapes extends DefaultFoodItem implements IDrink {
 
     public ItemGrapes() {
         super(3, 0.1f, false);
-        setUnlocalizedName("grapes");
+        setTranslationKey("grapes");
     }
 
     @Optional.Method(modid = "toughasnails")

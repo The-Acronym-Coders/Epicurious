@@ -6,6 +6,6 @@ import com.teamacronymcoders.epicurious.common.defaults.DefaultBlockCrop;
 public class BlockCropBarley extends DefaultBlockCrop {
     public BlockCropBarley() {
         super(ModItems.seeds_barley, ModItems.barley);
-        setUnlocalizedName("crop_barley");
+        setTranslationKey("crop_barley");
     }
 }

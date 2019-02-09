@@ -19,7 +19,7 @@ import java.util.Random;
 public class FluidBlockBeer extends BlockFluidBase {
     public FluidBlockBeer(Fluid fluid) {
         super("beer", fluid, new Material(MapColor.WATER));
-        setUnlocalizedName(Epicurious.MODID + ".fluid.beer");
+        setTranslationKey(Epicurious.MODID + ".fluid.beer");
     }
 
     @Override

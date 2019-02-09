@@ -11,7 +11,7 @@ import net.minecraftforge.fluids.Fluid;
 public class FluidBlockGrapeJuice extends BlockFluidBase {
     public FluidBlockGrapeJuice(Fluid fluid) {
         super("grape_juice", fluid, new Material(MapColor.WATER));
-        setUnlocalizedName(Epicurious.MODID + ".fluid.grape_juice");
+        setTranslationKey(Epicurious.MODID + ".fluid.grape_juice");
     }
 
     @Override

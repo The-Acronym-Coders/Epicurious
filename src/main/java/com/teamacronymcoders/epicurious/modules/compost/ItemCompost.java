@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 
 public class ItemCompost extends DefaultItem {
     public ItemCompost() {
-        setUnlocalizedName("compost");
+    	setTranslationKey("compost");
     }
 
     @Override
