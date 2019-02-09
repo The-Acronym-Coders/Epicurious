@@ -13,15 +13,20 @@ import com.teamacronymcoders.epicurious.modules.wine.fluid.FluidBlockWine;
 import com.teamacronymcoders.epicurious.modules.wine.fluid.FluidGrapeJuice;
 import com.teamacronymcoders.epicurious.modules.wine.fluid.FluidWine;
 import com.teamacronymcoders.epicurious.modules.wine.grape.BlockCropGrape;
-import com.teamacronymcoders.epicurious.modules.wine.grape.ItemGrapeSeeds;
-import com.teamacronymcoders.epicurious.modules.wine.grape.ItemGrapes;
 import com.teamacronymcoders.epicurious.modules.wine.recipe.RecipeBrewingWine;
 import com.teamacronymcoders.epicurious.modules.wine.recipe.RecipeCrushingGrapeJuice;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Module(value = Epicurious.MODID)
+@Mod.EventBusSubscriber
 public class WineModule extends ModuleBase {
 
     @Override
@@ -46,16 +51,28 @@ public class WineModule extends ModuleBase {
 
     @Override
     public void registerItems(ConfigRegistry configRegistry, ItemRegistry itemRegistry) {
-        itemRegistry.register(new ItemGrapes());
-        itemRegistry.register(new ItemGrapeSeeds());
-        itemRegistry.register(new ItemPomace());
+        itemRegistry.register(ModItems.grapes);
+        itemRegistry.register(ModItems.seeds_grape);
+        itemRegistry.register(ModItems.pomace);
+    }
+
+    @Override
+    public void init(FMLInitializationEvent event) {
+        super.init(event);
+        RecipeCrushingGrapeJuice.setupCrushingRecipe();
+        RecipeBrewingWine.setupWineBrewingRecipe();
     }
 
     @Override
     public void postInit(FMLPostInitializationEvent event) {
         super.postInit(event);
-        RecipeCrushingGrapeJuice.setupCrushingRecipe();
-        RecipeBrewingWine.setupWineBrewingRecipe();
         CompostMaterialsAPI.addMaterialToList(ModItems.pomace);
+    }
+
+    @SubscribeEvent
+    public void registerModels(ModelRegistryEvent event) {
+        ModelLoader.setCustomModelResourceLocation(ModItems.grapes, 0, new ModelResourceLocation("epicurious:grapes", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ModItems.seeds_grape, 0, new ModelResourceLocation("epicurious:seeds_grapes", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ModItems.pomace, 0, new ModelResourceLocation("epicurious:pomace", "inventory"));
     }
 }

@@ -4,6 +4,6 @@ import com.teamacronymcoders.epicurious.common.defaults.DefaultItem;
 
 public class ItemPomace extends DefaultItem {
     public ItemPomace() {
-    	setTranslationKey("pomace");
+        setTranslationKey("pomace");
     }
 }
