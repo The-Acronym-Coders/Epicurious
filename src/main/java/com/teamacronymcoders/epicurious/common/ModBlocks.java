@@ -1,13 +1,13 @@
 package com.teamacronymcoders.epicurious.common;
 
-import com.teamacronymcoders.epicurious.modules.beer.barley.BlockCropBarley;
-import com.teamacronymcoders.epicurious.modules.beer.hops.BlockCropHops;
-import com.teamacronymcoders.epicurious.modules.compost.BlockCompostBin;
-import com.teamacronymcoders.epicurious.modules.wine.grape.BlockCropGrape;
+import com.teamacronymcoders.epicurious.modules.content.beer.barley.BlockCropBarley;
+import com.teamacronymcoders.epicurious.modules.content.beer.hops.BlockCropHops;
+import com.teamacronymcoders.epicurious.modules.content.compost.BlockCompostBin;
+import com.teamacronymcoders.epicurious.modules.content.wine.grape.BlockCropGrape;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
-    @GameRegistry.ObjectHolder("epicurious:crop_grape")
+    @GameRegistry.ObjectHolder("epicurious:crop_grapes")
     public static BlockCropGrape grape;
 
     @GameRegistry.ObjectHolder("epicurious:crop_barley")

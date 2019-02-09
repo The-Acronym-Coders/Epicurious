@@ -1,13 +1,13 @@
 package com.teamacronymcoders.epicurious.common;
 
 import com.teamacronymcoders.epicurious.modules.base.ItemYeast;
-import com.teamacronymcoders.epicurious.modules.beer.ItemBarleySeeds;
-import com.teamacronymcoders.epicurious.modules.beer.barley.ItemBarley;
-import com.teamacronymcoders.epicurious.modules.beer.hops.ItemHops;
-import com.teamacronymcoders.epicurious.modules.compost.ItemCompost;
-import com.teamacronymcoders.epicurious.modules.wine.ItemPomace;
-import com.teamacronymcoders.epicurious.modules.wine.grape.ItemGrapeSeeds;
-import com.teamacronymcoders.epicurious.modules.wine.grape.ItemGrapes;
+import com.teamacronymcoders.epicurious.modules.content.beer.ItemBarleySeeds;
+import com.teamacronymcoders.epicurious.modules.content.beer.barley.ItemBarley;
+import com.teamacronymcoders.epicurious.modules.content.beer.hops.ItemHops;
+import com.teamacronymcoders.epicurious.modules.content.compost.ItemCompost;
+import com.teamacronymcoders.epicurious.modules.content.wine.ItemPomace;
+import com.teamacronymcoders.epicurious.modules.content.wine.grape.ItemGrapeSeeds;
+import com.teamacronymcoders.epicurious.modules.content.wine.grape.ItemGrapes;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {

@@ -1,7 +1,7 @@
 package com.teamacronymcoders.epicurious.client;
 
 import com.teamacronymcoders.epicurious.common.CommonProxy;
-import com.teamacronymcoders.epicurious.modules.beer.fluid.ParticleBubblesExt;
+import com.teamacronymcoders.epicurious.modules.content.beer.fluid.ParticleBubblesExt;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;

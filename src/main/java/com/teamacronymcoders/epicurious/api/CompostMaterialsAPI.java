@@ -1,7 +1,7 @@
 package com.teamacronymcoders.epicurious.api;
 
 import com.teamacronymcoders.epicurious.Epicurious;
-import com.teamacronymcoders.epicurious.modules.compost.storage.CompostMaterialList;
+import com.teamacronymcoders.epicurious.modules.content.compost.storage.CompostMaterialList;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 

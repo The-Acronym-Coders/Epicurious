@@ -16,6 +16,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 import static net.minecraftforge.fml.common.Mod.Instance;
 
@@ -41,6 +42,7 @@ public class Epicurious extends BaseModFoundation<Epicurious> {
     public static Epicurious INSTANCE;
 
     public static Logger logger;
+    public static Random RANDOM = new Random();
 
     static {
         FluidRegistry.enableUniversalBucket();
