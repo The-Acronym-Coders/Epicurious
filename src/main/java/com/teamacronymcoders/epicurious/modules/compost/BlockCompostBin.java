@@ -3,8 +3,6 @@ package com.teamacronymcoders.epicurious.modules.compost;
 import com.teamacronymcoders.base.blocks.BlockBase;
 import com.teamacronymcoders.epicurious.Epicurious;
 import com.teamacronymcoders.epicurious.api.CompostMaterialsAPI;
-import com.teamacronymcoders.epicurious.common.ModBlocks;
-import com.teamacronymcoders.epicurious.common.ModItems;
 import com.teamacronymcoders.epicurious.modules.theoneprobe.TOPInfoProvider;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;
@@ -15,7 +13,6 @@ import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
@@ -34,7 +31,7 @@ public class BlockCompostBin extends BlockBase implements TOPInfoProvider {
     public BlockCompostBin() {
         super(Material.WOOD);
         setCreativeTab(Epicurious.TAB);
-        setUnlocalizedName("compost_bin");
+        setTranslationKey("compost_bin");
         setSoundType(SoundType.WOOD);
         setLightOpacity(0);
     }
@@ -84,7 +81,7 @@ public class BlockCompostBin extends BlockBase implements TOPInfoProvider {
     }
 
     @Override
-    @SuppressWarnings("deprecation")
+    @Deprecated
     public IBlockState getStateFromMeta(int meta) {
         return getDefaultState().withProperty(Compost_Amount, meta);
     }
@@ -111,25 +108,25 @@ public class BlockCompostBin extends BlockBase implements TOPInfoProvider {
     }
 
     @Override
-    @SuppressWarnings("deprecation")
+    @Deprecated
     public boolean isFullBlock(IBlockState state) {
         return false;
     }
 
     @Override
-    @SuppressWarnings("deprecation")
+    @Deprecated
     public boolean isFullCube(IBlockState state) {
         return false;
     }
 
     @Override
-    @SuppressWarnings("deprecation")
+    @Deprecated
     public boolean isOpaqueCube(IBlockState state) {
         return false;
     }
 
     @Override
-    @SuppressWarnings("deprecation")
+    @Deprecated
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
         return new AxisAlignedBB(0.0d, 0.0d, 0.0d, 1.0d, 0.7d, 1.0d);
     }

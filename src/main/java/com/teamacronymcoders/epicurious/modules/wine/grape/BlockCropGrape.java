@@ -17,7 +17,7 @@ public class BlockCropGrape extends DefaultBlockCrop {
 
     public BlockCropGrape() {
         super(ModItems.seeds_grape, ModItems.grapes);
-        setUnlocalizedName("crop_grape");
+        setTranslationKey("crop_grape");
     }
 
     @Override

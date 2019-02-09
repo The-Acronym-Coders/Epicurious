@@ -8,7 +8,7 @@ public class ItemBarleySeeds extends DefaultItemSeed {
 
     public ItemBarleySeeds() {
         super(ModBlocks.barley, Blocks.FARMLAND);
-        setUnlocalizedName("seed_barley");
+        setTranslationKey("seed_barley");
     }
 
 }

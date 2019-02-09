@@ -6,6 +6,6 @@ import com.teamacronymcoders.epicurious.common.defaults.DefaultBlockCrop;
 public class BlockCropHops extends DefaultBlockCrop {
     public BlockCropHops() {
         super(ModItems.hops, ModItems.hops);
-        setUnlocalizedName("crop_hops");
+        setTranslationKey("crop_hops");
     }
 }

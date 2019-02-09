@@ -12,7 +12,7 @@ public class FluidBlockWine extends BlockFluidBase {
 
     public FluidBlockWine(Fluid fluid) {
         super("wine", fluid, new Material(MapColor.WATER));
-        setUnlocalizedName(Epicurious.MODID + ".fluid.wine");
+        setTranslationKey(Epicurious.MODID + ".fluid.wine");
     }
 
     @Override

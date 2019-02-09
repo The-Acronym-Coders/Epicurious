@@ -20,7 +20,7 @@ public class ItemHops extends DefaultFoodItem implements IDrink {
 
     public ItemHops() {
         super(2, 0.05f, false);
-        setUnlocalizedName("hops");
+        setTranslationKey("hops");
     }
 
     @Optional.Method(modid = "toughasnails")
