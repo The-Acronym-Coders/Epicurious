@@ -1,0 +1,26 @@
+itemGroup.epicurious=Epikurism
+
+tile.epicurious.compost_bin.name=Kompostlåda
+
+fluid.epicurious.grape_juice=vindruvsjuice
+fluid.epicurious.wine=Vin
+fluid.epicurious.beer=Öl
+
+item.epicurious.yeast.name=Jäst
+
+item.epicurious.compost.name=Kompost
+
+item.epicurious.hops.name=Humle
+item.epicurious.barley.name=Korn
+item.epicurious.seed_barley.name=Korn Frö
+
+item.epicurious.grapes.name=Vindruvor
+item.epicurious.seed_grape.name=Vindruvskärnor
+item.epicurious.pomace.name=Pomace
+
+book.title=Epikuriska Äventyr
+book.landing.text=Välkommen till ditt kulinariska äventyr!
+
+epicurious.patchouli.time=Tid:
+epicurious.patchouli.amount.decrease=Sänknings Mängd:
+epicurious.patchouli.chance=Sänknings Chans:
