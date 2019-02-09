@@ -14,9 +14,13 @@ item.epicurious.hops.name=Hops
 item.epicurious.barley.name=Barley
 item.epicurious.seed_barley.name=Barley Seeds
 
-item.epicurious.grape.name=Grapes
+item.epicurious.grapes.name=Grapes
 item.epicurious.seed_grape.name=Grape Seeds
 item.epicurious.pomace.name=Pomace
 
 book.title=Epicurious Adventures
 book.landing.text=Welcome to your Culinary Adventure!
+
+epicurious.patchouli.time=Time:
+epicurious.patchouli.amount.decrease=Decrease Amount:
+epicurious.patchouli.chance=Decrease Chance:
